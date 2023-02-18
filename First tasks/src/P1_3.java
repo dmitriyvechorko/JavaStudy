@@ -25,5 +25,3 @@ public class P1_3 {
         }
     }
 }
-
-

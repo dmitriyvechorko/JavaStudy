@@ -15,8 +15,8 @@ public class CashMachine {
         this.numOf100 += numOf100;
     }
 
-    public void showInfo () {
-        System.out.println("\nСумма купюр: " +  (numOf20 * 20 + numOf50 * 50 + numOf100 * 100));
+    public void showInfo() {
+        System.out.println("\nСумма купюр: " + (numOf20 * 20 + numOf50 * 50 + numOf100 * 100));
         System.out.println("купюр номиналом 20: " + numOf20);
         System.out.println("Купюр номиналом 50: " + numOf50);
         System.out.println("Купюр номиналом 100: " + numOf100 + "\n");
@@ -34,7 +34,7 @@ public class CashMachine {
         int numOf20Needed = Math.min(remainingAmount / 20, numOf20);
         remainingAmount -= numOf20Needed * 20;
 
-        if (remainingAmount != 0 ) {
+        if (remainingAmount != 0) {
             remainingAmount = amount;
 
             numOf100Needed = Math.min(remainingAmount / 100, numOf100);
@@ -47,7 +47,7 @@ public class CashMachine {
             remainingAmount -= numOf50Needed * 50;
         }
 
-        if (remainingAmount != 0 ) {
+        if (remainingAmount != 0) {
             remainingAmount = amount;
 
             numOf20Needed = Math.min(remainingAmount / 20, numOf20);
@@ -60,7 +60,7 @@ public class CashMachine {
             remainingAmount -= numOf100Needed * 100;
         }
 
-        if (remainingAmount != 0 ) {
+        if (remainingAmount != 0) {
             remainingAmount = amount;
 
             numOf50Needed = Math.min(remainingAmount / 50, numOf50);
@@ -73,7 +73,7 @@ public class CashMachine {
             remainingAmount -= numOf100Needed * 100;
         }
 
-        if (remainingAmount != 0 ) {
+        if (remainingAmount != 0) {
             remainingAmount = amount;
 
             numOf20Needed = Math.min(remainingAmount / 20, numOf20);
@@ -86,7 +86,7 @@ public class CashMachine {
             remainingAmount -= numOf50Needed * 50;
         }
 
-        if (remainingAmount != 0 ) {
+        if (remainingAmount != 0) {
             remainingAmount = amount;
 
             numOf50Needed = Math.min(remainingAmount / 50, numOf50);
@@ -99,7 +99,7 @@ public class CashMachine {
             remainingAmount -= numOf20Needed * 20;
         }
 
-        if (remainingAmount != 0 ) {
+        if (remainingAmount != 0) {
             return false;
         }
 

@@ -1,15 +1,41 @@
 public class Main {
+
+    //public static void main(String[] args) {
+    //    Person sergey = new Person();
+    //    Person dmitry = new Person("Dmitry", 19);
+    //
+    //    sergey.talk("Hi!");
+    //    sergey.move();
+    //    dmitry.talk("Hi!");
+    //    dmitry.move();
+    //}
+
+    //public static void main(String[] args) {
+    //    CreditCard bobAccount = new CreditCard(13403450, 294.65);
+    //    CreditCard nickAccount = new CreditCard(54762389, 865.92);
+    //    CreditCard johnAccount = new CreditCard(73232403, 456.25);
+    //    bobAccount.topUpCard(56.64);
+    //    nickAccount.topUpCard(11.11);
+    //    johnAccount.withdrawMoney(500.);
+    //    bobAccount.viewAccountInfo();
+    //    nickAccount.viewAccountInfo();
+    //    johnAccount.viewAccountInfo();
+    //}
+
     public static void main(String[] args) {
-        //Calculator calculate = new Calculator(2.5, 156.87, "Blue");
-        Calculator calculate = new Calculator();
-        System.out.println(calculate.color);
-        System.out.println(calculate.weight);
-        System.out.println(calculate.cost);
-        System.out.println(calculate.weight + " " + calculate.cost  + " " + calculate.color);
-        System.out.println(calculate.sum(4.6, 65));
-        System.out.println(calculate.difference(45, 8.1));
-        System.out.println(calculate.multiply(4.3, 1.2));
-        System.out.println(calculate.divisionWithoutRemainder(26.4, 7));
-        System.out.println(calculate.remainderOfDivision(34, 10.6));
+        CashMachine cashMachine = new CashMachine(13, 7, 4);
+
+        cashMachine.showInfo();
+
+        int amountToWithdraw = 730;
+        boolean success = cashMachine.withdrawMoney(amountToWithdraw);
+        if (success) {
+            System.out.println("Операция снятия денег прошла успешно.");
+        } else {
+            System.out.println("Операция снятия денег не удалась.");
+        }
+
+        System.out.println("\nПосле снятия:");
+        cashMachine.showInfo();
     }
 }

@@ -1,3 +1,5 @@
+package StarTask;
+
 public class Apple {
     private String color;
 

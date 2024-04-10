@@ -23,11 +23,11 @@ public class Main {
     //}
 
     public static void main(String[] args) {
-        CashMachine cashMachine = new CashMachine(13, 7, 4);
+        CashMachine cashMachine = new CashMachine(5, 1, 1);
 
         cashMachine.showInfo();
 
-        int amountToWithdraw = 730;
+        int amountToWithdraw = 110;
         boolean success = cashMachine.withdrawMoney(amountToWithdraw);
         if (success) {
             System.out.println("Операция снятия денег прошла успешно.");

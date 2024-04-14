@@ -4,6 +4,12 @@ public class Dog extends Animal{
     private Dog() {
     }
 
+    private static Dog instance = new Dog();
+
+    public static Dog getInstance() {
+        return instance;
+    }
+
     public static Dog createDog() {
         return new Dog();
     }

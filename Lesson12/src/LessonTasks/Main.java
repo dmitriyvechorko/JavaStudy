@@ -37,7 +37,6 @@ public class Main {
         return str.replaceAll("\\n", "");
     }
 
-    //([А-Я][а-я]+)\s([А-Я][а-я]+)
     public static void findNameAndSurname(String str) {
         Pattern pattern = Pattern.compile("([А-Я][а-я]+)\\s([А-Я][а-я]+)");
         Matcher matcher = pattern.matcher(str);

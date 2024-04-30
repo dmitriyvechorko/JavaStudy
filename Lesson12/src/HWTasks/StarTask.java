@@ -22,7 +22,7 @@ public class StarTask {
         }
 
         // Поиск номера телефона
-        Pattern phonePattern = Pattern.compile("\\+\\(\\d{2}\\)\\d{7,}");
+        Pattern phonePattern = Pattern.compile("\\+\\(\\d{2}\\)\\d{7}");
         Matcher phoneMatcher = phonePattern.matcher(text);
         if (phoneMatcher.find()) {
             System.out.println("phone number: " + phoneMatcher.group());

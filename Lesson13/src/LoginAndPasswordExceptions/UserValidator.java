@@ -15,11 +15,14 @@ public class UserValidator {
         return true;
     }
 
-    public static void main(String[] args) throws WrongLoginException, WrongPasswordException {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String login, password, confirmPassword = "";
+        System.out.println("Enter your login:");
         login = scanner.nextLine();
+        System.out.println("Enter your password:");
         password = scanner.nextLine();
+        System.out.println("Confirm your password:");
         confirmPassword = scanner.nextLine();
         try {
             validate(login, password, confirmPassword);

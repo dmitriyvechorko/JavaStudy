@@ -1,6 +1,5 @@
 package LoginAndPasswordExceptions;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class UserValidator {
@@ -22,9 +21,9 @@ public class UserValidator {
         login = scanner.nextLine();
         password = scanner.nextLine();
         confirmPassword = scanner.nextLine();
-        try{
+        try {
             validate(login, password, confirmPassword);
-        }catch (WrongLoginException | WrongPasswordException e1){
+        } catch (WrongLoginException | WrongPasswordException e1) {
             System.out.println(e1.getMessage());
         }
 

@@ -1,9 +1,6 @@
 package LoginAndPasswordExceptions;
 
-public class WrongLoginException extends Exception{
-    WrongLoginException() {
-    }
-
+public class WrongLoginException extends Exception {
     WrongLoginException(String message) {
         super(message);
     }

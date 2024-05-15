@@ -27,7 +27,6 @@ public class DocumentValidator {
             System.out.println("Validation complete. Check the output files for results.");
         } catch (IOException e) {
             System.out.println("There is smth wrong with Input/Output");
-            DocumentValidator.main();
         }
     }
 

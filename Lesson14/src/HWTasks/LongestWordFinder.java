@@ -24,7 +24,7 @@ public class LongestWordFinder {
             writer.write(longestWord);
             System.out.println("The longest word is: " + longestWord);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("There is smth wrong with Input/Output");
         }
     }
 }

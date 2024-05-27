@@ -17,35 +17,17 @@ public class FilteringMapUsingStream {
             String name = scanner.nextLine();
             data.put(id, name);
         }
-
-        // Filtering map depending on conditions
-        List<String> selectedNames = new ArrayList<>();
-        for (Map.Entry<Integer, String> entry : data.entrySet()) {
-            int id = entry.getKey();
-            String name = entry.getValue();
-            if (isValidId(id) && hasOddNumberOfLetters(name)) {
-                selectedNames.add(reverseName(name));
-            }
-        }
-
-        System.out.println("Names backwards: ");
-        for (String name : selectedNames) {
-            System.out.println(name);
-        }
+        
+        List<String> filteredNames = data.entrySet().stream()
+                .filter(entry -> Arrays.asList(1, 2, 5, 8, 9, 13).contains(entry.getKey())) // filtering List by id
+                .map(Map.Entry::getValue)
+                .filter(name -> name.length() % 2 != 0) // filtering by odd number of letters in name
+                .map(FilteringMapUsingStream::reverseString) // reverse names
+                .toList();
+        System.out.println(filteredNames);
     }
 
-    // Checking id
-    private static boolean isValidId(int id) {
-        return id == 1 || id == 2 || id == 5 || id == 8 || id == 9 || id == 13;
-    }
-
-    // Checking string on  odd number of letters
-    private static boolean hasOddNumberOfLetters(String str) {
-        return str.length() % 2 != 0;
-    }
-
-    // Reversing the string
-    private static String reverseName(String name) {
-        return new StringBuilder(name).reverse().toString();
+    public static String reverseString(String str) {
+        return new StringBuilder(str).reverse().toString();
     }
 }

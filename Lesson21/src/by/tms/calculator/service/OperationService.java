@@ -1,13 +1,14 @@
 package by.tms.calculator.service;
 
 import by.tms.calculator.model.Operation;
+import by.tms.calculator.storage.FileOperationStorage;
 import by.tms.calculator.storage.OperationStorage;
 
 import java.util.List;
 
 public class OperationService {
 
-    private final OperationStorage operationStorage = new JSONFileOperationStorage();
+    private final OperationStorage operationStorage = new FileOperationStorage();
 
     public Operation execute(Operation operation) {
         switch (operation.getType()) {

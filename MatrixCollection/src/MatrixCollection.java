@@ -4,12 +4,6 @@ import java.util.NoSuchElementException;
 public class MatrixCollection implements Iterable<Integer> {
     private final int[][] matrix = new int[5][5];
 
-    //1,1,0,0,0
-    //1,1,0,0,0
-    //0,0,0,0,0
-    //0,0,0,0,0
-    //0,0,0,1,1
-
     public void add(int value, int row, int col) {
         this.matrix[row][col] = value;
     }
